@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.7.20)  5 OCT 2009 11:18
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.7.20)  5 OCT 2009 15:09
 entering extended mode
  %&-line parsing enabled.
 **captation-ic05-a09.tex
@@ -1010,12 +1010,12 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./logo.png>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 39.
+LaTeX Font Info:    Try loading font information for U+msa on input line 43.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 39.
+LaTeX Font Info:    Try loading font information for U+msb on input line 43.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
@@ -1161,6 +1161,19 @@ File: logo.png Graphic file (type png)
  <use logo.png> [34
 
 ]
+File: logo.png Graphic file (type png)
+
+<use logo.png> [35
+
+]
+File: logo.png Graphic file (type png)
+ <use logo.png> [36
+
+]
+File: logo.png Graphic file (type png)
+ <use logo.png> [37
+
+]
 \openout3 = `captation-ic05-a09.vrb'.
 
 
@@ -1173,23 +1186,9 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 ))
 File: logo.png Graphic file (type png)
  <use logo.png>
-[35
+[38
 
 ] (./captation-ic05-a09.vrb)
-File: logo.png Graphic file (type png)
- <use logo.png> [36
-
-] (./captation-ic05-a09.vrb)
-File: logo.png Graphic file (type png)
-
-<use logo.png> [37
-
-] (./captation-ic05-a09.vrb)
-File: logo.png Graphic file (type png)
- <use logo.png> [38
-
-]
-(./captation-ic05-a09.vrb)
 File: logo.png Graphic file (type png)
  <use logo.png> [39
 
@@ -1203,26 +1202,40 @@ File: logo.png Graphic file (type png)
  <use logo.png> [41
 
 ]
+(./captation-ic05-a09.vrb)
+File: logo.png Graphic file (type png)
+ <use logo.png> [42
+
+] (./captation-ic05-a09.vrb)
 File: logo.png Graphic file (type png)
 
-<use logo.png> [42
+<use logo.png> [43
 
-]
-File: logo.png Graphic file (type png)
- <use logo.png> [43
-
-]
+] (./captation-ic05-a09.vrb)
 File: logo.png Graphic file (type png)
  <use logo.png> [44
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png>
-[45
+
+<use logo.png> [45
 
 ]
 File: logo.png Graphic file (type png)
  <use logo.png> [46
+
+]
+File: logo.png Graphic file (type png)
+ <use logo.png> [47
+
+]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+[48
+
+]
+File: logo.png Graphic file (type png)
+ <use logo.png> [49
 
 ]
 \openout3 = `captation-ic05-a09.vrb'.
@@ -1233,24 +1246,11 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 ))
 File: logo.png Graphic file (type png)
  <use logo.png>
-[47
+[50
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [48
-
-]
-File: logo.png Graphic file (type png)
- <use logo.png> [49
-
-]
-File: logo.png Graphic file (type png)
- <use logo.png> [50
-
-]
-File: logo.png Graphic file (type png)
-
-<use logo.png> [51
+ <use logo.png> [51
 
 ]
 File: logo.png Graphic file (type png)
@@ -1262,8 +1262,8 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png>
-[54
+
+<use logo.png> [54
 
 ]
 File: logo.png Graphic file (type png)
@@ -1275,12 +1275,12 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [57
+ <use logo.png>
+[57
 
 ]
 File: logo.png Graphic file (type png)
-
-<use logo.png> [58
+ <use logo.png> [58
 
 ]
 File: logo.png Graphic file (type png)
@@ -1292,8 +1292,8 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png>
-[61
+
+<use logo.png> [61
 
 ]
 File: logo.png Graphic file (type png)
@@ -1305,12 +1305,12 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [64
+ <use logo.png>
+[64
 
 ]
 File: logo.png Graphic file (type png)
-
-<use logo.png> [65
+ <use logo.png> [65
 
 ]
 File: logo.png Graphic file (type png)
@@ -1322,8 +1322,8 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png>
-[68
+
+<use logo.png> [68
 
 ]
 File: logo.png Graphic file (type png)
@@ -1335,12 +1335,12 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [71
+ <use logo.png>
+[71
 
 ]
 File: logo.png Graphic file (type png)
-
-<use logo.png> [72
+ <use logo.png> [72
 
 ]
 File: logo.png Graphic file (type png)
@@ -1352,8 +1352,8 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png>
-[75
+
+<use logo.png> [75
 
 ]
 File: logo.png Graphic file (type png)
@@ -1365,12 +1365,12 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [78
+ <use logo.png>
+[78
 
 ]
 File: logo.png Graphic file (type png)
-
-<use logo.png> [79
+ <use logo.png> [79
 
 ]
 File: logo.png Graphic file (type png)
@@ -1382,8 +1382,8 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png>
-[82
+
+<use logo.png> [82
 
 ]
 File: logo.png Graphic file (type png)
@@ -1395,12 +1395,12 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [85
+ <use logo.png>
+[85
 
 ]
 File: logo.png Graphic file (type png)
-
-<use logo.png> [86
+ <use logo.png> [86
 
 ]
 File: logo.png Graphic file (type png)
@@ -1409,6 +1409,24 @@ File: logo.png Graphic file (type png)
 ]
 File: logo.png Graphic file (type png)
  <use logo.png> [88
+
+]
+File: logo.png Graphic file (type png)
+
+<use logo.png> [89
+
+]
+File: logo.png Graphic file (type png)
+ <use logo.png> [90
+
+]
+File: logo.png Graphic file (type png)
+ <use logo.png> [91
+
+]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+[92
 
 ]
 \tf@nav=\write5
@@ -1420,18 +1438,17 @@ File: logo.png Graphic file (type png)
 \tf@snm=\write7
 \openout7 = `captation-ic05-a09.snm'.
 
-
-(./captation-ic05-a09.aux)
+ (./captation-ic05-a09.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 14611 strings out of 95063
- 245288 string characters out of 1182610
+ 14621 strings out of 95063
+ 245387 string characters out of 1182610
  337184 words of memory out of 1500000
- 17242 multiletter control sequences out of 10000+50000
+ 17244 multiletter control sequences out of 10000+50000
  9735 words of font info for 37 fonts, out of 1200000 for 2000
  28 hyphenation exceptions out of 8191
  45i,16n,74p,345b,1411s stack positions out of 5000i,500n,6000p,200000b,5000s
@@ -1446,9 +1463,9 @@ re/texmf-texlive/fonts/type1/bluesky/cm/cmtt10.pfb></usr/share/texmf-texlive/fo
 nts/type1/bluesky/cm/cmtt8.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm
 /cmtt9.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/ams/msam5.pfb></usr/sh
 are/texmf-texlive/fonts/type1/bluesky/ams/msam7.pfb>
-Output written on captation-ic05-a09.pdf (88 pages, 705087 bytes).
+Output written on captation-ic05-a09.pdf (92 pages, 733150 bytes).
 PDF statistics:
- 2803 PDF objects out of 2984 (max. 8388607)
- 181 named destinations out of 1000 (max. 131072)
+ 2925 PDF objects out of 2984 (max. 8388607)
+ 189 named destinations out of 1000 (max. 131072)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
