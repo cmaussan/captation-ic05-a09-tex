@@ -1,6 +1,6 @@
 \beamer@endinputifotherversion {3.07pt}
 \select@language {french}
 \beamer@sectionintoc {1}{Le web}{7}{0}{1}
-\beamer@sectionintoc {2}{Crawler}{31}{0}{2}
-\beamer@sectionintoc {3}{Autres m\IeC {\'e}thodes}{76}{0}{3}
-\beamer@sectionintoc {4}{Exemple}{91}{0}{4}
+\beamer@sectionintoc {2}{Crawler}{32}{0}{2}
+\beamer@sectionintoc {3}{Autres m\IeC {\'e}thodes}{78}{0}{3}
+\beamer@sectionintoc {4}{Exemple}{95}{0}{4}

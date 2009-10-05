@@ -14,6 +14,8 @@
 \newcommand<>{\rtgicolor}[1]{{\color#2[rgb]{1,0.6,0}#1}}
 \newenvironment{rtgicolorenv}{\only{\color[rgb]{1,0.6,0}}}{}
 
+\NoAutoSpaceBeforeFDP 
+
 \title{Captation de données web}
 \author{Camille Maussang}
 \institute{camille.maussang@rtgi.fr\\ RTGI}
@@ -95,7 +97,8 @@
 	\begin{itemize}[<+-| rtgicolor@+>]
 	\item Que cherchons-nous ?
 	\item Que faire pour récupérer ce qui nous est important ?
-	\item Toujours penser "heuristiques" et "effets de bord" !
+	\item Toujours penser \og heuristiques \fg ...
+    \item ... et \og effets de bord \fg !
 	\end{itemize}
 	\end{block}
 }
@@ -263,6 +266,7 @@ print "end.\n";
 	\item Autres...
 		\begin{itemize}[<+-| rtgicolor@+>]
 		\item Javascript
+        \item \emph{Deep web}
        	\item Web privé
 		\end{itemize}
 	\end{itemize}
@@ -298,13 +302,14 @@ print "end.\n";
 	\frametitle{Aggrégation}
 
 	\begin{block}<+->{Principe}
-	\uncover<+->{\rtgicolor<.>{Syndication ou comment "retourner" l'accès aux données}}
+	\uncover<+->{\rtgicolor<.>{Syndication ou comment \emph{renverser} l'accès aux données}}
 	\end{block}
 
 	\begin{block}<+->{\rtgicolor<.>{Problèmes}}
 	\begin{itemize}[<+-| rtgicolor@+>]
 	\item Atom, \texttt{RSS}, encore mille versions
-	\item Flux complet / partiel / vide avec ou sans \texttt{HTML} 
+	\item Flux complet / partiel / vide ...
+    \item ... avec ou sans date, permaliens, \texttt{HTML} 
 	\end{itemize}
 	\end{block}
 }
@@ -320,6 +325,7 @@ print "end.\n";
 	\begin{itemize}[<+-| rtgicolor@+>]
 	\item \texttt{DOM} ou Regexp ou les deux
 	\item Template et dynamisme des pages scrapées 
+    \item Flash et Javascript
 	\end{itemize}
 	\end{block}
 }
@@ -334,16 +340,29 @@ print "end.\n";
 	\begin{block}<+->{\rtgicolor<.>{Problèmes}}
 	\begin{itemize}[<+-| rtgicolor@+>]
 	\item Limitations
-	\item API propriétaires 
+	\item API propriétaires
 	\end{itemize}
 	\end{block}
 }
 
 \section{Exemple}
 
+
 \frame{
 	\frametitle{Un exemple concret}
 
+    \begin{block}<+->{\rtgicolor<.>{Créer un corpus de documents sur un thème précis avec Google}}
+	\begin{itemize}[<+-| rtgicolor@+>]
+    \item Créer un set de requêtes
+    \item Écrire un robot de captation 
+    	\begin{itemize}[<+-| rtgicolor@+>]
+    	\item Module de scraping des résultats de Google\\(avec \texttt{Web::Scraper} par ex.)
+	    \item Module d'ordonnancement
+        \item Module de \og crawl \fg
+	    \end{itemize}
+    \item Capter les données :)
+	\end{itemize}
+    \end{block}
 }
 
 %Problèmes concrets:
@@ -367,7 +386,7 @@ print "end.\n";
 }
 
 \frame{
-	\frametitle{Merci!}	
+	\frametitle{Merci !}	
 
     \begin{itemize}
     \item \url{http://labs.rtgi.eu/}
