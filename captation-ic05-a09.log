@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.7.20)  5 OCT 2009 15:09
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.7.20)  5 OCT 2009 17:59
 entering extended mode
  %&-line parsing enabled.
 **captation-ic05-a09.tex
@@ -868,6 +868,20 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
+
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.tex
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count163
+\scratchdimen=\dimen184
+\scratchbox=\box54
+\nofMPsegments=\count164
+\nofMParguments=\count165
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count166
+\MPscratchDim=\dimen185
+\MPnumerator=\count167
+\everyMPtoPDFconversion=\toks46
+)
 -------------------- Geometry parameters
 paper: user defined
 landscape: --
@@ -908,14 +922,13 @@ driver: pdftex
 (1in=72.27pt, 1cm=28.45pt)
 -----------------------
 Package hyperref Info: Link coloring OFF on input line 22.
-
-(/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+ (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2006/12/27 v2.28 Cross-referencing by name of section
 
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
 )
-\c@section@level=\count163
+\c@section@level=\count168
 )
 LaTeX Info: Redefining \ref on input line 22.
 LaTeX Info: Redefining \pageref on input line 22.
@@ -1261,22 +1274,25 @@ File: logo.png Graphic file (type png)
  <use logo.png> [53
 
 ]
+<crawler.png, id=1652, 681.6053pt x 683.02235pt>
+File: crawler.png Graphic file (type png)
+ <use crawler.png>
 File: logo.png Graphic file (type png)
 
 <use logo.png> [54
 
-]
+ <./crawler.png (PNG copy)>]
 File: logo.png Graphic file (type png)
  <use logo.png> [55
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [56
+
+<use logo.png> [56
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png>
-[57
+ <use logo.png> [57
 
 ]
 File: logo.png Graphic file (type png)
@@ -1284,7 +1300,8 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [59
+ <use logo.png>
+[59
 
 ]
 File: logo.png Graphic file (type png)
@@ -1292,8 +1309,7 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
-
-<use logo.png> [61
+ <use logo.png> [61
 
 ]
 File: logo.png Graphic file (type png)
@@ -1301,12 +1317,12 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [63
+
+<use logo.png> [63
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png>
-[64
+ <use logo.png> [64
 
 ]
 File: logo.png Graphic file (type png)
@@ -1314,7 +1330,8 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [66
+ <use logo.png>
+[66
 
 ]
 File: logo.png Graphic file (type png)
@@ -1322,8 +1339,7 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
-
-<use logo.png> [68
+ <use logo.png> [68
 
 ]
 File: logo.png Graphic file (type png)
@@ -1331,12 +1347,12 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [70
+
+<use logo.png> [70
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png>
-[71
+ <use logo.png> [71
 
 ]
 File: logo.png Graphic file (type png)
@@ -1344,7 +1360,8 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [73
+ <use logo.png>
+[73
 
 ]
 File: logo.png Graphic file (type png)
@@ -1352,8 +1369,7 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
-
-<use logo.png> [75
+ <use logo.png> [75
 
 ]
 File: logo.png Graphic file (type png)
@@ -1361,12 +1377,12 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [77
+
+<use logo.png> [77
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png>
-[78
+ <use logo.png> [78
 
 ]
 File: logo.png Graphic file (type png)
@@ -1374,7 +1390,8 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [80
+ <use logo.png>
+[80
 
 ]
 File: logo.png Graphic file (type png)
@@ -1382,8 +1399,7 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
-
-<use logo.png> [82
+ <use logo.png> [82
 
 ]
 File: logo.png Graphic file (type png)
@@ -1391,12 +1407,12 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [84
+
+<use logo.png> [84
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png>
-[85
+ <use logo.png> [85
 
 ]
 File: logo.png Graphic file (type png)
@@ -1404,7 +1420,8 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [87
+ <use logo.png>
+[87
 
 ]
 File: logo.png Graphic file (type png)
@@ -1412,8 +1429,7 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
-
-<use logo.png> [89
+ <use logo.png> [89
 
 ]
 File: logo.png Graphic file (type png)
@@ -1421,12 +1437,21 @@ File: logo.png Graphic file (type png)
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [91
+
+<use logo.png> [91
+
+]
+File: logo.png Graphic file (type png)
+ <use logo.png> [92
+
+]
+File: logo.png Graphic file (type png)
+ <use logo.png> [93
 
 ]
 File: logo.png Graphic file (type png)
  <use logo.png>
-[92
+[94
 
 ]
 \tf@nav=\write5
@@ -1445,10 +1470,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 14621 strings out of 95063
- 245387 string characters out of 1182610
- 337184 words of memory out of 1500000
- 17244 multiletter control sequences out of 10000+50000
+ 14927 strings out of 95063
+ 249429 string characters out of 1182610
+ 338370 words of memory out of 1500000
+ 17542 multiletter control sequences out of 10000+50000
  9735 words of font info for 37 fonts, out of 1200000 for 2000
  28 hyphenation exceptions out of 8191
  45i,16n,74p,345b,1411s stack positions out of 5000i,500n,6000p,200000b,5000s
@@ -1463,9 +1488,9 @@ re/texmf-texlive/fonts/type1/bluesky/cm/cmtt10.pfb></usr/share/texmf-texlive/fo
 nts/type1/bluesky/cm/cmtt8.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm
 /cmtt9.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/ams/msam5.pfb></usr/sh
 are/texmf-texlive/fonts/type1/bluesky/ams/msam7.pfb>
-Output written on captation-ic05-a09.pdf (92 pages, 733150 bytes).
+Output written on captation-ic05-a09.pdf (94 pages, 785791 bytes).
 PDF statistics:
- 2925 PDF objects out of 2984 (max. 8388607)
- 189 named destinations out of 1000 (max. 131072)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2992 PDF objects out of 3580 (max. 8388607)
+ 193 named destinations out of 1000 (max. 131072)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
