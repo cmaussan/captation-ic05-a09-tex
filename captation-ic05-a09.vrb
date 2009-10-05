@@ -1,0 +1,43 @@
+\frametitle {Crawler}
+\lstset{
+language=Perl,
+basicstyle=\tiny\ttfamily,
+keywordstyle=\color[rgb]{1,0.6,0},
+moredelim=[s][\color{gray}]{/}{/},
+stringstyle=\color{gray},
+showstringspaces=false,
+    numbers=left
+}
+\begin{lstlisting}
+use strict; use warnings;
+use LWP::Simple;
+
+my ( $max_depth, @seed ) = @ARGV or die( 'need depth and url(s)' );
+my @already_visited = ();
+my $depth = 0;
+my @to_visit = @seed;
+
+while( $depth <= $max_depth && @to_visit ) {
+    print "crawling depth $depth\n";
+    my @links = ();
+    for my $url ( @to_visit ) {
+        if( my $content = get( $url ) ) {
+            while ( $content =~ m/<a href="([^"]+)"/gi) { push @links, $1 }
+        }
+        push @already_visited, $url;
+        print "$url visited.\n";
+    }
+    @to_visit = ();
+    for my $url_to_check ( @links ) {
+        my $to_push = 0;
+        for my $url_visited ( @already_visited ) {
+            if( $url_to_check eq $url_visited ) { $to_push = 0; last; }
+            $to_push = 1;
+        }
+        push @to_visit, $url_to_check
+            if( $to_push && !grep{ $_ eq $url_to_check } @to_visit );
+    }
+    $depth++;
+}
+print "end.\n";
+\end{lstlisting}

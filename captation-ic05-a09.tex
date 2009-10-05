@@ -1,0 +1,365 @@
+\documentclass[10pt]{beamer}
+
+\usepackage{beamerthemesplit}
+\usepackage{ucs}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[french]{babel}
+\usepackage{listings}
+
+\usetheme{Dresden}
+\setbeamercolor{structure}{fg=white!50!black}
+
+\newcommand<>{\rtgicolor}[1]{{\color#2[rgb]{1,0.6,0}#1}}
+\newenvironment{rtgicolorenv}{\only{\color[rgb]{1,0.6,0}}}{}
+
+\title{Captation de données web}
+\author{Camille Maussang}
+\institute{camille.maussang@rtgi.fr\\ RTGI}
+\date{\today}
+
+\begin{document}
+
+%\section{Introduction}
+
+\logo{\includegraphics[width=1cm]{logo}}
+
+\frame{
+	\titlepage
+}
+
+\frame{
+  \frametitle{Qui suis-je ?}
+
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item Camille Maussang (\texttt{cmaussan})
+	\item RTGI fabrique des outils d'analyse du web social
+	\end{itemize}
+}
+
+\section{Le web}
+
+\frame{
+	\frametitle{Qu'est-ce que le web et comment le saisir ?}
+
+	\begin{block}<+->{\rtgicolor<.>{Le web est un corpus de documents}}
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item ouvert,
+	\item hétérogène,
+	\item et dynamique.
+	\end{itemize}
+	\end{block}
+
+%	\pause
+}
+
+\frame{
+	\frametitle{Qu'est-ce que le web et comment le saisir ?}
+
+	\begin{block}<+->{\rtgicolor<.>{Le web peut être représenté par des graphes}}
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item où les noeuds sont :
+		\begin{itemize}[<+-| rtgicolor@+>]
+		\item des pages,
+		\item des sites,
+		\item des mots,
+		\item ou des gens,
+		\end{itemize}
+	\item et les arcs des liens.
+	\end{itemize}
+	\end{block}
+
+}
+
+\frame{
+	\frametitle{Qu'est-ce que le web et comment le saisir ?}
+
+	\begin{block}<+->{\rtgicolor<.>{Capter des données sur le web requiert un certain nombre de ressources}}
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item Bande passante
+	\item Stockage
+	\item Temps machine
+	\end{itemize}
+	\end{block}
+}
+
+\frame{
+	\frametitle{Qu'est-ce que le web et comment le saisir ?}
+
+	\begin{block}<+->{\rtgicolor<.>{Donc :}}
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item Que cherchons-nous ?
+	\item Que faire pour récupérer ce qui nous est important ?
+	\item Toujours penser "heuristiques" et "effets de bord" !
+	\end{itemize}
+	\end{block}
+}
+
+\frame{
+	\frametitle{Qu'est-ce que le web et comment le saisir ?}
+
+	\begin{alertblock}<+->{Ne jamais oublier !}
+	\uncover<+->{\rtgicolor<.>{Le web c'est}}
+	\uncover<+->{\rtgicolor<.>{n'importe qui (ouvert)}}
+	\uncover<+->{\rtgicolor<.>{qui publie n'importe quoi n'importe comment (hétérogène)}}
+	\uncover<+->{\rtgicolor<.>{n'importe quand (dynamique).}}
+	\end{alertblock}
+}
+
+\section{Crawler}
+
+\frame{
+	\frametitle{Définitions}
+
+	\begin{block}<+->{\rtgicolor<.>{Normes, recommandations et standards}}
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item Norme (ISO/RFC) : \texttt{HTTP}, \texttt{URL}, \texttt{SGML}, \texttt{HTML} 1-2, \texttt{MIME}
+	\item Recommandation W3C : \texttt{HTML} 3-4-5, \texttt{XHTML} 1, \texttt{CSS}, \texttt{DOM}
+	\item Standards : \texttt{PDF} et Flash (Taux de pénétration $> 99\%$) 
+	\end{itemize}
+	\end{block}
+
+	\begin{block}<+->{\rtgicolor<.>{Web dynamique}}
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item \emph{server-side} : \texttt{CGI}, \texttt{PHP}, \texttt{ASP}, \texttt{JSP}
+	\item \emph{client-side} : \texttt{Javscript}, Flash, ActiveX
+	\end{itemize}
+	\end{block}
+
+}
+
+\begin{frame}[fragile]
+\frametitle{Prologue}
+
+\begin{block}<+->{\rtgicolor<.>{Principe}}
+\begin{itemize}[<+-| rtgicolor@+>]
+\item Télécharger \emph{une} page
+\end{itemize}
+\end{block}
+
+\lstset{
+	language=bash,
+	basicstyle=\tiny\ttfamily,
+	keywordstyle=\color[rgb]{1,0.6,0},
+%	moredelim=[s][\color{gray}]{/}{/},
+	stringstyle=\color{gray},
+	showstringspaces=false
+}
+\begin{uncoverenv}<+->
+\begin{lstlisting}
+$ wget 'http:://www.example.org/' -O page.html
+$ curl 'http:://www.example.org/' > page.html
+$ perl -MLWP::Simple -e 'print get("http://www.example.org/")' > page.html
+\end{lstlisting}
+\end{uncoverenv}
+
+\begin{block}<+->{\rtgicolor<.>{Déjà des problèmes}}
+\begin{itemize}[<+-| rtgicolor@+>]
+\item Type de fichier
+\item Encodage
+\item Contenu (\texttt{HTML})
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\frame{
+	\frametitle{Crawler}
+
+	\uncover<+->{\rtgicolor<.>{Principe}}
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item Télécharger 1 page
+	\item Extraire les liens
+	\item Télécharger les pages pointées par les liens
+	\item etc. etc.
+	\end{itemize}
+
+}
+
+\begin{frame}[fragile]
+\frametitle{Crawler}
+\lstset{
+	language=Perl,
+	basicstyle=\tiny\ttfamily,
+	keywordstyle=\color[rgb]{1,0.6,0},
+	moredelim=[s][\color{gray}]{/}{/},
+	stringstyle=\color{gray},
+	showstringspaces=false,
+    numbers=left
+}
+\begin{lstlisting}
+use strict; use warnings;
+use LWP::Simple;
+
+my ( $max_depth, @seed ) = @ARGV or die( 'need depth and url(s)' );
+my @already_visited = ();
+my $depth = 0;
+my @to_visit = @seed;
+
+while( $depth <= $max_depth && @to_visit ) {
+    print "crawling depth $depth\n";
+    my @links = ();
+    for my $url ( @to_visit ) {
+        if( my $content = get( $url ) ) {
+            while ( $content =~ m/<a href="([^"]+)"/gi) { push @links, $1 }
+        }
+        push @already_visited, $url;
+        print "$url visited.\n";
+    }
+    @to_visit = ();
+    for my $url_to_check ( @links ) {
+        my $to_push = 0;
+        for my $url_visited ( @already_visited ) {
+            if( $url_to_check eq $url_visited ) { $to_push = 0; last; }
+            $to_push = 1;
+        }
+        push @to_visit, $url_to_check
+            if( $to_push && !grep{ $_ eq $url_to_check } @to_visit );				
+    }
+    $depth++;
+}
+print "end.\n";
+\end{lstlisting}
+\end{frame}
+
+\frame{
+	\frametitle{Crawler}
+
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item Métriques (distance, profondeur, etc.)
+	\item Performance (goulots d'étranglement)
+	\item Scalabilité
+	\end{itemize}
+
+}
+
+\frame{
+	\frametitle{Crawling}
+
+	\begin{block}<+->{\rtgicolor<.>{De nouveaux problèmes}}
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item Politesse
+		\begin{itemize}[<+-| rtgicolor@+>]
+		\item DoS (\emph{Denial of Service}) : DNS, Serveurs HTTP
+		\item Blacklistage officiel (\texttt{robots.txt}, \texttt{sitemap.xml}, etc.)
+		\item Blacklistage officieux (\emph{cloaking}, pièges à robot)
+		\end{itemize}
+	\item Addressage
+		\begin{itemize}[<+-| rtgicolor@+>]
+		\item Normalisation d'\texttt{URL} (doublons)
+       	\item Site ou page ? 
+        \item Plusieurs permaliens pour un seul contenu (GYM aide un peu)
+		\end{itemize}
+	\item Autres...
+		\begin{itemize}[<+-| rtgicolor@+>]
+		\item Javascript
+       	\item Web privé
+		\end{itemize}
+	\end{itemize}
+    \end{block}
+}
+
+\frame{
+	\frametitle{Crawler}
+		
+	\begin{block}<+->{\rtgicolor<.>{Astuces}}
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item Utiliser les \texttt{headers HTTP}
+    \item User-agent et \texttt{random}
+	\end{itemize}
+    \end{block}
+
+	\begin{block}<+->{\rtgicolor<.>{Principes du \emph{Focused crawler}}}
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item Ne télécharger que les pages pertinentes
+	\end{itemize}
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item Indicateurs topologiques
+	\item Indicateurs sémantiques
+	\end{itemize}
+    \end{block}
+}
+
+\section{Autres méthodes}
+
+\frame{
+	\frametitle{Aggrégation}
+
+	\begin{block}<+->{Principe}
+	\uncover<+->{\rtgicolor<.>{Syndication ou comment "retourner" l'accès aux données}}
+	\end{block}
+
+	\begin{block}<+->{\rtgicolor<.>{Problèmes}}
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item Atom, \texttt{RSS}, encore mille versions
+	\item Flux complet / partiel / vide avec ou sans \texttt{HTML} 
+	\end{itemize}
+	\end{block}
+}
+
+\frame{
+	\frametitle{Scraping}
+
+	\begin{block}<+->{Principe}
+	\uncover<+->{\rtgicolor<.>{Analyser une page web pour en extraire une information spécifique}}
+	\end{block}
+
+	\begin{block}<+->{\rtgicolor<.>{Problèmes}}
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item \texttt{DOM} ou Regexp ou les deux
+	\item Template et dynamisme des pages scrapées 
+	\end{itemize}
+	\end{block}
+}
+
+\frame{
+	\frametitle{API}
+
+	\begin{block}<+->{Principe}
+	\uncover<+->{\rtgicolor<.>{Utiliser les API de certains sites pour collecter la donnée}}
+	\end{block}
+
+	\begin{block}<+->{\rtgicolor<.>{Problèmes}}
+	\begin{itemize}[<+-| rtgicolor@+>]
+	\item Limitations
+	\item API propriétaires 
+	\end{itemize}
+	\end{block}
+}
+
+\section{Exemple}
+
+\frame{
+	\frametitle{Un exemple concret}
+
+}
+
+%Problèmes concrets:
+%  - Constituer un corpus en scrapant un moteur de recherche
+
+\frame{
+	\frametitle{Wikipédia est ton ami :)}
+
+	\begin{itemize}
+	\item HTML : \url{http://en.wikipedia.org/wiki/HTML}
+	\item Crawler : \url{http://en.wikipedia.org/wiki/Web_crawler}
+	\item Focused Crawler : \url{http://en.wikipedia.org/wiki/Focused_crawler}
+	\item Scraping : \url{http://en.wikipedia.org/wiki/Web_scraping}
+	\item Cloaking : \url{http://en.wikipedia.org/wiki/Cloaking}
+	\item DoS : \url{http://en.wikipedia.org/wiki/Denial-of-service_attack}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Merci!}	
+
+    \begin{itemize}
+    \item \url{http://labs.rtgi.eu/}
+    \item \url{http://github.com/cmaussan/Picrowler}
+    \end{itemize}
+
+    \pause
+}
+
+\end{document}
