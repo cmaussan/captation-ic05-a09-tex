@@ -17,7 +17,7 @@
 \title{Captation de données web}
 \author{Camille Maussang}
 \institute{camille.maussang@rtgi.fr\\ RTGI}
-\date{A09}
+\date{IC05 - A09}
 
 \begin{document}
 
@@ -30,12 +30,16 @@
 }
 
 \frame{
-  \frametitle{Qui suis-je ?}
+%  \frametitle{Qui suis-je ?}
 
+	\begin{block}<+->{\rtgicolor<.>{Qui suis-je ?}}
 	\begin{itemize}[<+-| rtgicolor@+>]
 	\item Camille Maussang (\texttt{cmaussan})
-	\item RTGI fabrique des outils d'analyse du web social
+    \item Chef du dev chez RTGI...
+	\item ... qui fabrique des outils d'analyse du web social
+    \item ... en captant des données sur le web ;)
 	\end{itemize}
+    \end{block}
 }
 
 \section{Le web}
@@ -229,7 +233,7 @@ print "end.\n";
 	\begin{itemize}[<+-| rtgicolor@+>]
 	\item Métriques (distance, profondeur, etc.)
 	\item Performance (goulots d'étranglement)
-	\item Scalabilité
+	\item Scalabilité (de 1 page à 1G pages)
 	\end{itemize}
 
 }
@@ -266,7 +270,8 @@ print "end.\n";
 	\begin{block}<+->{\rtgicolor<.>{Astuces}}
 	\begin{itemize}[<+-| rtgicolor@+>]
 	\item Utiliser les \texttt{headers HTTP}
-    \item User-agent et \texttt{random}
+    \item User-agent
+    \item \texttt{random} et \texttt{sleep}
 	\end{itemize}
     \end{block}
 
